@@ -1,0 +1,33 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "ui components library",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ext": "js,html,scss,css"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "sergey",
+    "sass": "sass --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mo-designs-studio/ui-components.git"
+  },
+  "keywords": [
+    "ui",
+    "components"
+  ],
+  "author": "mo designs studio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mo-designs-studio/ui-components/issues"
+  },
+  "homepage": "https://github.com/mo-designs-studio/ui-components#readme",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "sergey": "^0.0.13"
+  }
+}

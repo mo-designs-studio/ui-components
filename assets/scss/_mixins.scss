@@ -1,0 +1,32 @@
+
+@mixin onScreenMaxWidth($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin onScreenMinWidth($screenWidth) {
+  @media (min-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin onScreenMaxHeight($maxHeight) {
+  @media (max-height: $maxHeight) {
+    @content;
+  }
+}
+
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+
+@function screens($screenName) {
+  @return map-get($screensWidths, $screenName);
+}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
