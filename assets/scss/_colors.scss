@@ -1,12 +1,7 @@
+
+
 $colors: (
-  primary: var(--primary-clr),
-  secondary: var(--secondary-clr),
-  tertiary: var(--tertiary-clr),
-  confirm: var(--confirm-clr),
-  done: var(--done-clr),
-  alarm: var(--alarm-clr),
-  caution: var(--caution-clr),
-  info: var(--info-clr),
+  
   Glory: #38407b,
   DeepGlory: #1f223e,
   DarkSky: #0e1b2e,
@@ -14,6 +9,7 @@ $colors: (
   Imperial: #bf463b,
   Barby: #ff6584,
   Mercury: #f43573,
+  RedWine: #780047,
   Mustard: #fcc359,
   Apricot: #f2bf5e,
   Energy: #ffb30d,
@@ -50,6 +46,17 @@ $colors: (
   LightBlue: #e9f1fa,
   PaleBlue: #effafd,
   ROYALBlue: #4a8bdf,
+  Primary: color(DeepGlory),
+  Secondary: color(Gray),
+  Tertiary: color(RedWine),
+  Proceed: color(Glory),
+  Agree: color(Pine),
+  Alarm: color(Bloody),
+  Caution: color(Energy),
+  Info: color(UltraViolet),
+  Light: #FFF,
+  Dark: color(DarkNight),
+  Hint: color(Ashes),
 );
 
 $screensWidths: (
@@ -59,3 +66,19 @@ $screensWidths: (
   Tablet: 1024px,
   Desktop: 1200px,
 );
+
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+
+@function screens($screenName) {
+  @return map-get($screensWidths, $screenName);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

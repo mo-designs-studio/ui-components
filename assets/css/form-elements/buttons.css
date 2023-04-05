@@ -1,0 +1,18 @@
+/* Error: The target selector was not found.
+ * Use "@extend .flex-row !optional" to avoid this error.
+ *    ,
+ * 25 |     @extend .flex-row;
+ *    |     ^^^^^^^^^^^^^^^^^
+ *    '
+ *   assets/scss/form-elements/buttons.scss 25:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: The target selector was not found.\aUse "@extend .flex-row !optional" to avoid this error.\a    \2577 \a 25 \2502      @extend .flex-row;\a    \2502      ^^^^^^^^^^^^^^^^^\a    \2575 \a   assets/scss/form-elements/buttons.scss 25:5  root stylesheet';
+}

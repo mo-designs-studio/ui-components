@@ -1,13 +1,5 @@
-@import "./variables";
+@import "./colors";
 @import "./mixins";
-
-.text-titles {
-    color: var(--primary-clr);
-}
-
-.text-subtitle {
-    color: var(--tertiary-clr);
-}
 
 /* Layout classes | Start */
 header {
@@ -21,28 +13,20 @@ main {
     flex-direction: column;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-}
-
 /* Layout classes | End */
 
 /* Containers classes | Start */
+.container {
+    width: var(--max-view-width);
+    @extend .padding;
+    margin-inline: auto;
+}
+
+.container-fluent {
+    width: 100%;
+    height: fit-content;
+}
+
 .padding-inline {
     padding-inline: var(--spacing-unit);
 }
@@ -72,18 +56,6 @@ section {
     margin-block: var(--spacing-unit);
 }
 
-.container {
-    width: var(--max-view-width);
-    @extend .padding;
-    margin-inline: auto;
-    @extend .margin-block;
-}
-
-.container-fluent {
-    width: 100%;
-    height: fit-content;
-}
-
 .spacer-column {
     height: 100%;
     width: var(--spacing-unit);
@@ -96,40 +68,185 @@ section {
 
 /* Containers classes | End */
 
-/* Text colors classes | Start */
-.text-white {
-    color: #FFF;
+/* Display classes | Start */
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
-/* Text colors classes | End */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+/* Display classes | End */
+
+/* Text classes | Start */
+
+.text-start {
+    text-align: start;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-capitalize-first {
+    &::first-letter {
+        text-transform: capitalize !important;
+    }
+}
+
+.text-align-justify {
+    text-align: justify !important;
+}
+
+.text-titles {
+    color: color(Primary);
+}
+
+.text-subtitle {
+    color: color(tertiary);
+}
+
+.text-white {
+    color: color(Light);
+}
+
+.text-dark {
+    color: color(Dark);
+}
+
+.text-primary {
+    color: color(Primary);
+}
+
+.text-secondart {
+    color: color(Secondary);
+}
+
+.text-tertiary {
+    color: color(tertiary);
+}
+
+.text-proceed {
+    color: var(--proceed-clr);
+}
+
+.text-agree {
+    color: color(Agree);
+}
+
+.text-alarm {
+    color: color(Alarm);
+}
+
+.text-caution {
+    color: color(Caution);
+}
+
+.text-info {
+    color: color(Info);
+}
+
+/* Text classes | End */
 
 /* Backgrounds colors classes | Start */
 .bg-primary {
-    background-color: var(--primary-clr);
+    background-color: color(Primary);
 }
 
 .bg-secondary {
-    background-color: var(--secondary-clr);
+    background-color: color(Secondary);
 }
 
-.bg-confirm {
-    background-color: var(--confirm-clr);
+.bg-proceed {
+    background-color: color(Proceed);
 }
 
-.bg-done {
-    background-color: var(--done-clr);
+.bg-agree {
+    background-color: color(Agree);
 }
 
 .bg-alarm {
-    background-color: var(--alarm-clr);
+    background-color: color(Alarm);
 }
 
 .bg-caution {
-    background-color: var(--caution-clr);
+    background-color: color(Caution);
 }
 
 .bg-info {
-    background-color: var(--info-clr);
+    background-color: color(Info);
 }
 
 /* Backgrounds colors classes | End */
