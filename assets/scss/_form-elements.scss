@@ -45,7 +45,7 @@ Button>span {
     border-color: var(--primary-clr);
 
     &:is(:focus, :hover) {
-        background-color: shade(#f43573, 10%);
+        background-color: shade(#f43573, 30%);
     }
 }
 
@@ -59,6 +59,30 @@ Button>span {
     @extend .bg-confirm;
     @extend .text-white;
     border-color: var(--confirm-clr);
+}
+
+.btn-done {
+    @extend .bg-done;
+    @extend .text-white;
+    border-color: var(--done-clr);
+}
+
+.btn-alarm {
+    @extend .bg-alarm;
+    @extend .text-white;
+    border-color: var(--alarm-clr);
+}
+
+.btn-caution {
+    @extend .bg-caution;
+    @extend .text-white;
+    border-color: var(--caution-clr);
+}
+
+.btn-info {
+    @extend .bg-info;
+    @extend .text-white;
+    border-color: var(--info-clr);
 }
 
 /* Buttons classes | End */

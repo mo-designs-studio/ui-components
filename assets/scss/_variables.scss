@@ -1,16 +1,24 @@
-
 $colors: (
+  primary: var(--primary-clr),
+  secondary: var(--secondary-clr),
+  tertiary: var(--tertiary-clr),
+  confirm: var(--confirm-clr),
+  done: var(--done-clr),
+  alarm: var(--alarm-clr),
+  caution: var(--caution-clr),
+  info: var(--info-clr),
   Glory: #38407b,
   DeepGlory: #1f223e,
   DarkSky: #0e1b2e,
-  Barby: #ff6584,
+  Bloody: #bf0b3b,
   Imperial: #bf463b,
+  Barby: #ff6584,
+  Mercury: #f43573,
   Mustard: #fcc359,
   Apricot: #f2bf5e,
   Energy: #ffb30d,
   GreenMatt: #3ead5e,
   Pine: #006064,
-  Bloody: #bf0b3b,
   Mint: #4caf50,
   Pistachio: #b7d996,
   GreyCream: #e0e0e0,
@@ -42,7 +50,6 @@ $colors: (
   LightBlue: #e9f1fa,
   PaleBlue: #effafd,
   ROYALBlue: #4a8bdf,
- 
 );
 
 $screensWidths: (
@@ -52,4 +59,3 @@ $screensWidths: (
   Tablet: 1024px,
   Desktop: 1200px,
 );
-

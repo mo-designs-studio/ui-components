@@ -44,54 +44,42 @@
   --caution-clr: #ffb30d;
   --info-clr: #534c88;
   --hint-clr: #c0c0c0;
-  --border-clr: #e0e0e0;
-}
+  --border-clr: #e0e0e0; }
 
 @media (min-width: 480px) {
   :root {
-    --standard-font-size: 15px;
-  }
-}
+    --standard-font-size: 15px; } }
 @media (min-width: 768px) {
   :root {
-    --standard-font-size: 16px;
-  }
-}
+    --standard-font-size: 16px; } }
 @media (min-width: 1024px) {
   :root {
     --spacing-unit: 1.5rem;
-    --spacing-unit-2x: 3rem;
-  }
-}
+    --spacing-unit-2x: 3rem; } }
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
-}
+  font: inherit; }
 
 html,
 body {
   height: 100%;
   font-size: var(--standard-font-size);
-  color: var(--secondary-clr);
-}
+  color: var(--secondary-clr); }
 
 html:focus-within {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 img,
 picture,
@@ -99,8 +87,7 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 h1,
 h2,
@@ -109,143 +96,126 @@ h4,
 h5,
 h6 {
   text-align: center;
-  overflow-wrap: break-word;
-}
+  overflow-wrap: break-word; }
 
 p,
 small {
-  overflow-wrap: break-word;
-}
+  overflow-wrap: break-word; }
 
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none; }
 
 a {
   color: inherit;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+  text-decoration-skip-ink: auto; }
 
 .text-titles {
-  color: var(--primary-clr);
-}
+  color: var(--primary-clr); }
 
 .text-subtitle {
-  color: var(--tertiary-clr);
-}
+  color: var(--tertiary-clr); }
 
 /* Layout classes | Start */
 header {
-  width: 100%;
-}
+  width: 100%; }
 
 main {
   width: 100%;
   min-height: var(--main-min-height);
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .flex-row, Button {
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 .flex-column {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .flex-center, Button {
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .grid {
-  display: grid;
-}
+  display: grid; }
 
 /* Layout classes | End */
 /* Containers classes | Start */
 .padding-inline {
-  padding-inline: var(--spacing-unit);
-}
+  padding-inline: var(--spacing-unit); }
 
 .padding-block {
-  padding-block: var(--spacing-unit);
-}
+  padding-block: var(--spacing-unit); }
 
 .padding, .container {
-  padding: var(--spacing-unit);
-}
+  padding: var(--spacing-unit); }
 
 .margin-inline {
-  margin-inline: var(--spacing-unit);
-}
+  margin-inline: var(--spacing-unit); }
 
 .margin-block, .container {
-  margin-block: var(--spacing-unit);
-}
+  margin-block: var(--spacing-unit); }
 
 .margin {
-  margin: var(--spacing-unit);
-}
+  margin: var(--spacing-unit); }
 
 section {
   width: 100%;
-  margin-block: var(--spacing-unit);
-}
+  margin-block: var(--spacing-unit); }
 
 .container {
   width: var(--max-view-width);
-  margin-inline: auto;
-}
+  margin-inline: auto; }
 
 .container-fluent {
   width: 100%;
-  height: fit-content;
-}
+  height: fit-content; }
 
 .spacer-column {
   height: 100%;
-  width: var(--spacing-unit);
-}
+  width: var(--spacing-unit); }
 
 .spacer-row {
   width: 100%;
-  height: var(--spacing-unit);
-}
+  height: var(--spacing-unit); }
 
 /* Containers classes | End */
 /* Text colors classes | Start */
-.text-white, .btn-confirm, .btn-secondary, .btn-primary {
-  color: #FFF;
-}
+.text-white, .btn-primary, .btn-secondary, .btn-confirm, .btn-done, .btn-alarm, .btn-caution, .btn-info {
+  color: #FFF; }
 
 /* Text colors classes | End */
 /* Backgrounds colors classes | Start */
 .bg-primary, .btn-primary {
-  background-color: var(--primary-clr);
-}
+  background-color: var(--primary-clr); }
 
 .bg-secondary, .btn-secondary {
-  background-color: var(--secondary-clr);
-}
+  background-color: var(--secondary-clr); }
 
 .bg-confirm, .btn-confirm {
-  background-color: var(--confirm-clr);
-}
+  background-color: var(--confirm-clr); }
+
+.bg-done, .btn-done {
+  background-color: var(--done-clr); }
+
+.bg-alarm, .btn-alarm {
+  background-color: var(--alarm-clr); }
+
+.bg-caution, .btn-caution {
+  background-color: var(--caution-clr); }
+
+.bg-info, .btn-info {
+  background-color: var(--info-clr); }
 
 /* Backgrounds colors classes | End */
 /* Decoration classes | Start */
 .border-thin {
-  border: 0.5px solid var(--border-clr);
-}
+  border: 0.5px solid var(--border-clr); }
 
 /* Decoration classes | End */
 /* Buttons classes | Start */
@@ -254,8 +224,7 @@ section {
   --btn-padding-block: .25rem;
   --btn-margin-block: .5rem;
   --fs-button: .925rem;
-  --fw-button: 500;
-}
+  --fw-button: 500; }
 
 Button {
   height: fit-content;
@@ -268,38 +237,42 @@ Button {
   background-clip: border-box;
   background-color: white;
   border: 1px solid;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 button > .bi {
-  display: flex;
-}
-button > .bi::after {
-  content: "";
-  width: 5px;
-}
+  display: flex; }
+  button > .bi::after {
+    content: "";
+    width: 5px; }
 
 Button > span {
   font-family: inherit;
   font-size: var(--fs-button);
   font-weight: var(--fw-button);
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 .btn-primary {
-  border-color: var(--primary-clr);
-}
-.btn-primary:is(:focus, :hover) {
-  background-color: #dc3068;
-}
+  border-color: var(--primary-clr); }
+  .btn-primary:is(:focus, :hover) {
+    background-color: #ab2551; }
 
 .btn-secondary {
-  border-color: var(--secondary-clr);
-}
+  border-color: var(--secondary-clr); }
 
 .btn-confirm {
-  border-color: var(--confirm-clr);
-}
+  border-color: var(--confirm-clr); }
+
+.btn-done {
+  border-color: var(--done-clr); }
+
+.btn-alarm {
+  border-color: var(--alarm-clr); }
+
+.btn-caution {
+  border-color: var(--caution-clr); }
+
+.btn-info {
+  border-color: var(--info-clr); }
 
 /* Buttons classes | End */
 
