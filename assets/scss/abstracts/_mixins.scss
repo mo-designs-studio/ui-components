@@ -1,0 +1,17 @@
+@mixin onScreenMaxWidth($screenWidth) {
+    @media (max-width: $screenWidth) {
+        @content;
+    }
+}
+
+@mixin onScreenMinWidth($screenWidth) {
+    @media (min-width: $screenWidth) {
+        @content;
+    }
+}
+
+@mixin onScreenMaxHeight($maxHeight) {
+    @media (max-height: $maxHeight) {
+        @content;
+    }
+}

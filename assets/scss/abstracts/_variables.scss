@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+
+$colors: (
+  "Glory": #38407b,
+  "DeepGlory": #1f223e,
+  "DarkSky": #0e1b2e,
+  "GloryLight": #9fc3e6,
+  "UltraViolet": #534c88,
+  å "ROYALBlue": #4a8bdf,
+  "Bloody": #bf0b3b,
+  "Imperial": #bf463b,
+  "Barby": #ff6584,
+  "Mercury": #f43573,
+  "RedWine": #780047,
+  "Mustard": #fcc359,
+  "Apricot": #f2bf5e,
+  "Energy": #ffb30d,
+  "SunLight": #facd71,
+  "Brownish": #ab7b3a,
+  "Copper": #c19d60,
+  "ShinyCopper": #d2aa6a,
+  "GreenMatt": #3ead5e,
+  "Pine": #006064,
+  "Mint": #4caf50,
+  "Pistachio": #b7d996,
+  "Fairouz": #30c4c7,
+  "FairouzDimmy": #298991,
+  "Ocean": #3ca8c3,
+  "White": #fff,
+  "GreyCream": #e0e0e0,
+  "Ashes": #c0c0c0,
+  "Smoky": #a7a7a7,
+  "Gray": #8d8d8d,
+  "BrownMatt": #292929,
+  "Mestrious": #171717,
+  "DarkNight": #111111,
+  "Facebook": #3b5998,
+  "Twitter": #1da1f2,
+  "Youtube": #ff0000,
+  "Linkedin": #0a66c2,
+  "Instagram": #c32aa3,
+  "Whatsapp": #25d366,
+  "Dribbble": #ea4c89,
+  "Slack": #4a154b,
+  "Telegram": #0088cc,
+) !default;
+
+$primary-clr: color("DeepGlory");
+$secondary-clr: color("Gray");
+$tertiary-clr: color("RedWine");
+$proceed-clr: color("Glory");
+$agree-clr: color("Pine");
+$alarm-clr: color("Bloody");
+$caution-clr: color("Energy");
+$info-clr: color("UltraViolet");
+$white-clr: color("White");
+$light-clr: color("GreyCream");
+$dark-clr: color("Mestrious");
+
+$article-text-clr: tint($primary-clr, 30%);
+$border-light-clr: color("GreyCream");
+$border-dark-clr: color("Ashes");
+$hint-clr: color("Ashes");
+
+$breakpoints: (
+  "Mini-Mobile": 320px,
+  "Mobile": 480px,
+  "Mini-Tablet": 768px,
+  "Tablet": 1024px,
+  "Desktop": 1200px,
+) !default;
