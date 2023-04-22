@@ -1,0 +1,74 @@
+.input-group,
+.text-area-group {
+  height: $elementHeight;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid color(GreyCream);
+  background-clip: border-box;
+  margin: 5px auto;
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 5px 10px;
+    color: $secondary-clr;
+    font-size: var(--fs-body-100);
+    font-weight: var(--fw-medium);
+    text-transform: lowercase;
+    border: none;
+    border-end-end-radius: 5px;
+    border-start-end-radius: 5px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: lighten($color: $secondary-clr, $amount: 40%);
+    box-shadow: 0 0 10px $secondary-clr;
+  }
+}
+
+.text-area-group {
+  height: 150px;
+}
+
+textarea {
+  line-height: 1.75;
+  resize: none;
+}
+
+.input-group--start-icon,
+.input-group--end-icon {
+  height: 100%;
+  aspect-ratio: 1 /1;
+  display: flex;
+  @extend .flex-center;
+  background-color: $white-clr;
+
+  .bi {
+    color: $secondary-clr;
+    font-size: var(--fs-regular-icon);
+    margin: auto;
+  }
+}
+
+.input-group--start-icon {
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
+  border-inline-end: 1px solid color(GreyCream);
+}
+
+.input-group--end-icon {
+  border-end-end-radius: 5px;
+  border-start-end-radius: 5px;
+  border-inline-start: 1px solid color(GreyCream);
+}
+
+input::placeholder {
+    color: color(Smoky);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+  }

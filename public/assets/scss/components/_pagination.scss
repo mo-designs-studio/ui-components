@@ -1,6 +1,6 @@
 .pagination-section {
   width: 100%;
-  padding-block: var(--spacing-unit);
+  margin-block: var(--spacing-unit);
 }
 
 .pagination-container {
@@ -12,7 +12,6 @@
   width: min(100%, calc(var(--max-width) / 2));
   height: 40px;
   padding-inline: 5px;
-  margin-inline: auto;
   margin-bottom: 5px;
   @extend .border-regualr-light;
   border-radius: 5px;
@@ -75,6 +74,6 @@
 @include onScreenMinWidth(screens("Tablet")) {
   .pagination-navbar {
     width: 50%;
-    margin-inline: unset;
+    margin-inline: 0;
   }
 }

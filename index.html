@@ -1,23 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Components</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/ltr.css" />
-  </head>
-  <body>
-    <main>
-      <sergey-import src="forms/buttons/buttons.html" />
-      <sergey-import src="forms/buttons/actions-buttons.html" />
-      <sergey-import src="forms/buttons/strict-buttons.html" />
-      <sergey-import src="forms/buttons/outline-buttons.html" />
-      <sergey-import src="components/tables/tables.html" />
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Components</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/ltr.css" />
+</head>
+
+<body>
+  <main>
+    <sergey-import src="forms/buttons/buttons.html" />
+    <sergey-import src="forms/buttons/actions-buttons.html" />
+    <sergey-import src="forms/buttons/strict-buttons.html" />
+    <sergey-import src="forms/buttons/outline-buttons.html" />
+    <sergey-import src="components/tables/tables.html" />
+    <section>
+      <div class="container">
+        <form action="">
+          <div class="form-row mob-row">
+            <div class="form-field flex-mob-1 flex-mtab-2 flex-tab-3 flex-dsk-1">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+              </div>
+            </div>
+            <div class="form-field flex-mob-2 flex-mtab-3 flex-tab-2 flex-dsk-1">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+                <div class="input-group--end-icon">
+                  <i class="bi bi-info"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="label-inline" for="firstName">periority</label>
+              <div class="checkbox-form-field no-row">
+                <div class="checkbox-container ">
+                  <label class="checkbox">
+                    <input class="pseduo-checkbox" type="checkbox" name="" />
+                    <span class="fake-checkbox">
+                      <i class="bi bi-check"></i>
+                    </span>
+                  </label>
+                  <label for="">low</label>
+                </div>
+                <div class="checkbox-container ">
+                  <label class="checkbox">
+                    <input class="pseduo-checkbox" type="checkbox" name="" />
+                    <span class="fake-checkbox">
+                      <i class="bi bi-check"></i>
+                    </span>
+                  </label>
+                  <label for="">hight</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="label-inline" for="firstName">periority</label>
+              <div class="checkbox-form-field mob-row">
+                <div class="checkbox-container ">
+                  <label class="checkbox">
+                    <input class="pseduo-checkbox" type="checkbox" name="" />
+                    <span class="fake-checkbox">
+                      <i class="bi bi-check"></i>
+                    </span>
+                  </label>
+                  <label for="">low</label>
+                </div>
+                <div class="checkbox-container ">
+                  <label class="checkbox">
+                    <input class="pseduo-checkbox" type="checkbox" name="" />
+                    <span class="fake-checkbox">
+                      <i class="bi bi-check"></i>
+                    </span>
+                  </label>
+                  <label for="">hight</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row flex-wrap">
+            <div class="form-field width-mob-50">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+                <div class="input-group--end-icon">
+                  <i class="bi bi-info"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-field width-mob-40">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+
+              </div>
+            </div>
+            <div class="form-field width-mob-35">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+
+              </div>
+            </div>
+            <div class="form-field width-mob-65">
+              <label for="firstName">first name</label>
+              <div class="input-group">
+                <div class="input-group--start-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <input type="text" name="" placeholder="placeholder text here" autocomplete="off" spellcheck="false"
+                  required max="30" min="2" id="firstName" />
+
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

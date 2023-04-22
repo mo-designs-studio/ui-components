@@ -1,0 +1,121 @@
+.form-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.no-row {
+  flex-direction: column !important;
+}
+.mob-row {
+  flex-direction: column !important;
+}
+.mtab-row {
+  flex-direction: column !important;
+}
+.tab-row {
+  flex-direction: column !important;
+}
+.dsk-row {
+  flex-direction: column !important;
+}
+
+@include onScreenMinWidth(screens("Mobile")) {
+  .mob-row {
+    flex-direction: row !important;
+  }
+}
+@include onScreenMinWidth(screens("Mini-Tablet")) {
+  .mtab-row {
+    flex-direction: row !important;
+  }
+}
+@include onScreenMinWidth(screens("Tablet")) {
+  .tab-row {
+    flex-direction: row !important;
+  }
+}
+@include onScreenMinWidth(screens("Desktop")) {
+  .dsk-row {
+    flex-direction: row !important;
+  }
+}
+$flexUnits: 1, 2, 3, 4;
+
+@each $unit in $flexUnits {
+  .flex-#{$unit} {
+    flex: #{$unit} !important;
+  }
+}
+
+@include onScreenMinWidth(screens("Mobile")) {
+  @each $unit in $flexUnits {
+    .flex-mob-#{$unit} {
+      flex: #{$unit} !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Mini-Tablet")) {
+  @each $unit in $flexUnits {
+    .flex-mtab-#{$unit} {
+      flex: #{$unit} !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Tablet")) {
+  @each $unit in $flexUnits {
+    .flex-tab-#{$unit} {
+      flex: #{$unit} !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Desktop")) {
+  @each $unit in $flexUnits {
+    .flex-dsk-#{$unit} {
+      flex: #{$unit} !important;
+    }
+  }
+}
+
+$widthUnits: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85,
+  90, 95, 100;
+
+@each $unit in $widthUnits {
+  .width-#{$unit} {
+    width: $unit * 1% !important;
+    flex: unset !important;
+  }
+}
+
+@include onScreenMinWidth(screens("Mobile")) {
+  @each $unit in $widthUnits {
+    .width-mob-#{$unit} {
+      width: $unit * 1% !important;
+      flex: unset !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Mini-Tablet")) {
+  @each $unit in $widthUnits {
+    .width-mtab-#{$unit} {
+      width: $unit * 1% !important;
+      flex: unset !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Tablet")) {
+  @each $unit in $widthUnits {
+    .width-tab-#{$unit} {
+      width: $unit * 1% !important;
+      flex: unset !important;
+    }
+  }
+}
+@include onScreenMinWidth(screens("Desktop")) {
+  @each $unit in $widthUnits {
+    .width-dsk-#{$unit} {
+      width: $unit * 1% !important;
+      flex: unset !important;
+    }
+  }
+}

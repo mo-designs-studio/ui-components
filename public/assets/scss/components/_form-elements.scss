@@ -1,0 +1,33 @@
+$elementHeight: 40px;
+
+.form-field {
+  padding-inline: var(--spacing-unit);
+  margin-block: var(--spacing-unit);
+  overflow-x: hidden;
+}
+
+label {
+  color: $primary-clr;
+  font-size: var(--fs-body-100);
+  font-weight: var(--fw-medium);
+  text-transform: capitalize;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+// .label-inline {
+//   align-self: center;
+//   padding-inline-start: var(--spacing-unit);
+// }
+
+.form-buttons-bar {
+  width: var(--max-view-width);
+  margin: auto;
+  display: grid;
+  row-gap: var(--spacing-unit);
+}
+
+@import "./form-components/inputs";
+@import "./form-components/check-box";
+
