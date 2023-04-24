@@ -1,0 +1,46 @@
+.search-select-field {
+  position: relative;
+}
+
+.search-select-field input:focus + .filter-results-container {
+  display: block;
+}
+
+.filter-results-container {
+  max-height: 200px;
+  width: 100%;
+
+  position: absolute;
+  top: $elementHeight;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid color(GreyCream);
+  border-radius: 5px;
+  display: none;
+
+  ul li {
+    height: 40px;
+    padding-inline: var(--spacing-unit-half);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 0.5px solid color(GreyCream);
+    }
+
+    .bi {
+      color: color(GreyCream);
+    }
+
+    span {
+      color: $primary-clr;
+      font-size: var(--fs-tiny-nav);
+      font-weight: var(--fw-medium);
+    }
+
+    .text-span::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
