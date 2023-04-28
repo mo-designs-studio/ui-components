@@ -1,0 +1,19 @@
+@import "./modal";
+
+#set-applanguage-modal > .modal-container {
+    width: min(50%, 400px);
+}
+
+.language-symbol-container {
+    height: 20px;
+    width: 40px;
+
+    img {
+        max-height: 100%;
+    }
+}
+
+.modal-container>.buttons-bar {
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+}

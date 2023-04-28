@@ -496,7 +496,39 @@
         </form>
       </div>
     </section>
+    <section>
+      <div class="container">
+        <div class="form-row">
+          <div class="form-field">
+            <button class="button-filled-proceed modal-controller" id="modal-controller" data-modal-target="modal-basic" type="button">
+              <span>show basic modal</span>
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="modal-basic" role="dialog">
+      <div class="modal-container">
+        <div class="modal-title">
+          <h4><i class="bi bi-translate"></i></h4>
+        </div>
+        <div class="buttons-bar">
+          <button type="button" class="button-filled-proceed">
+            <i class="bi bi-journal-check" tabindex="-1"></i>
+            <span>save</span>
+
+          </button>
+          <button type="reset" class="button-filled-light modal-dismiss" data-modal-target="modal-basic">
+            <i class="bi bi-eject"></i>
+            <span>close</span>
+
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
+  <script type="module" src="assets/js/script.js"></script>
 </body>
 
 </html>

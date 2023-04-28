@@ -8166,6 +8166,7 @@ header {
 main {
   width: 100%;
   min-height: var(--main-min-height);
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -8250,7 +8251,7 @@ section {
   justify-content: flex-start;
 }
 
-.justify-center, .flex-center, .fake-checkbox, .input-group--start-icon,
+.justify-center, .flex-center, .modal, .fake-checkbox, .input-group--start-icon,
 .input-group--end-icon, .pagination-navbar > ul > li a, .pagination-navbar > ul li, button {
   justify-content: center;
 }
@@ -8275,7 +8276,7 @@ section {
   align-items: flex-start;
 }
 
-.align-center, .flex-center, .fake-checkbox, .input-group--start-icon,
+.align-center, .flex-center, .modal, .fake-checkbox, .input-group--start-icon,
 .input-group--end-icon, .pagination-navbar > ul > li a, .pagination-navbar > ul li, button {
   align-items: center;
 }
@@ -8292,7 +8293,7 @@ section {
   align-items: stretch;
 }
 
-.flex-center, .fake-checkbox, .input-group--start-icon,
+.flex-center, .modal, .fake-checkbox, .input-group--start-icon,
 .input-group--end-icon, .pagination-navbar > ul > li a, .pagination-navbar > ul li, button {
   display: flex;
 }
@@ -8593,7 +8594,7 @@ section {
   transform: rotate(180deg);
 }
 
-.position-zero, .pseduo-checkbox, .background-image-cover, .cover {
+.position-zero, .modal, .pseduo-checkbox, .background-image-cover, .cover {
   top: 0;
   bottom: 0;
   left: 0;
@@ -9817,6 +9818,71 @@ input::placeholder {
   text-transform: capitalize;
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+  display: none;
+}
+
+.modal-container {
+  width: min(50%, 800px);
+  height: max-content;
+  padding: var(--spacing-unit);
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+.modal-container > .modal-title h4 {
+  color: #5d5d5d;
+}
+
+.modal-container > .buttons-bar {
+  width: 100%;
+  margin-top: var(--spacing-unit);
+  display: grid;
+  grid-template-columns: 25% 25%;
+  column-gap: var(--spacing-unit);
+}
+
+/* Buttons Styling  */
+.register-button {
+  background-color: #5d5d5d;
+  border: 1px solid #e0e0e0;
+  margin-inline-end: auto !important;
+}
+.register-button span {
+  color: white;
+}
+.register-button:hover, .register-button:focus {
+  background-color: #5d5d5d;
+  border-color: #e0e0e0;
+}
+
+.reset-button {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  margin-inline-end: var(--spacing-unit) !important;
+}
+.reset-button span {
+  color: #5d5d5d;
+}
+.reset-button:hover, .reset-button:focus {
+  box-shadow: 0 0 10px #5d5d5d;
+}
+
+.cancel-button {
+  background-color: #e0e0e0;
+  border: 1px solid #c0c0c0;
+}
+.cancel-button:hover, .cancel-button:focus {
+  box-shadow: 0 0 10px #5d5d5d;
+}
+
+/* Buttons Styling */
 /* Tooltip classes | Start */
 .tooltip-container {
   position: relative;
