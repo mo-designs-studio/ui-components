@@ -453,6 +453,11 @@ section {
   }
 }
 
+.icon {
+  @extend .fs-regular-icon;
+  padding-inline-end: 10px;
+}
+
 /* Miscellaneous classes | End */
 
 /* shapes classes | Start */

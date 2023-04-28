@@ -1,86 +1,86 @@
-
 .modal {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    @extend .position-zero;
-    z-index: 99;
-    @extend .flex-center;
-    background-color: rgba(#000, .85);
-    backdrop-filter: blur(2px);
-    display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  @extend .position-zero;
+  z-index: 99;
+  @extend .flex-center;
+  background-color: rgba(#000, 0.85);
+  backdrop-filter: blur(2px);
+  display: none;
 }
-
 
 .modal-container {
-    width: min(50%, 800px);
-    height: max-content;
-    padding: var(--spacing-unit);
-    background-color: #FFF;
-    overflow: hidden;
+  width: min(50%, 800px);
+  height: max-content;
+  padding: var(--spacing-unit);
+  background-color: #fff;
+  overflow: hidden;
 }
 
-.modal-container>.modal-title {
-    h4 {
-        color: $secondary-clr;
-    }
+.modal-container > .modal-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-light-clr;
+  
+  h6 {
+    color: $secondary-clr;
+  }
 }
 
-
-
-.modal-container>.buttons-bar {
-    width: 100%;
-    margin-top: var(--spacing-unit);
-    display: grid;
-    grid-template-columns: 25% 25%;
-    column-gap: var(--spacing-unit);
-
+.modal-container > .buttons-bar {
+  width: 100%;
+  margin-top: var(--spacing-unit);
+  display: grid;
+  grid-template-columns: 25% 25%;
+  column-gap: var(--spacing-unit);
 }
 
 /* Buttons Styling  */
 .register-button {
+  background-color: $secondary-clr;
+  border: 1px solid $border-light-clr;
+  margin-inline-end: auto !important;
+
+  span {
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
     background-color: $secondary-clr;
-    border: 1px solid $border-light-clr;
-    margin-inline-end: auto !important;
-
-    span {
-        color: white;
-    }
-
-    &:hover,
-    &:focus {
-        background-color: $secondary-clr;
-        border-color: $border-light-clr;
-    }
+    border-color: $border-light-clr;
+  }
 }
 
 .reset-button {
-    background-color: white;
-    border: 1px solid color(GreyCream);
-    margin-inline-end: var(--spacing-unit) !important;
+  background-color: white;
+  border: 1px solid color(GreyCream);
+  margin-inline-end: var(--spacing-unit) !important;
 
-    span {
-        color: $secondary-clr;
-    }
+  span {
+    color: $secondary-clr;
+  }
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 10px $secondary-clr;
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px $secondary-clr;
+  }
 }
 
 .cancel-button {
-    background-color: color(GreyCream);
-    border: 1px solid color(Ashes);
+  background-color: color(GreyCream);
+  border: 1px solid color(Ashes);
 
-    span {
-        color: color(Gray);
-    }
+  span {
+    color: color(Gray);
+  }
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 10px $secondary-clr;
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px $secondary-clr;
+  }
 }
 
 /* Buttons Styling */
