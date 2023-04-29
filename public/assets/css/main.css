@@ -8440,7 +8440,7 @@ section {
   color: #e0e0e0 !important;
 }
 
-.text-dark, .button-outline-dark, .button-outline-light:is(:focus, :hover), .button-outline-light, .button-filled-light:is(:focus, :hover), .button-filled-light {
+.text-dark, .button-outline-dark, .button-outline-light:is(:focus, :hover), .button-filled-light:is(:focus, :hover) {
   color: #171717 !important;
 }
 
@@ -8448,7 +8448,7 @@ section {
   color: #1f223e !important;
 }
 
-.text-secondary, .button-outline-secondary, button {
+.text-secondary, .button-outline-light, .button-outline-secondary, .button-filled-light, button {
   color: #5d5d5d !important;
 }
 
@@ -9203,7 +9203,7 @@ section {
   --btn-margin-block: 0.5rem;
   --fs-button: 1rem;
   --fw-button: 500;
-  --fs-button-icon: 0.975rem;
+  --fs-button-icon: 1.125rem;
 }
 
 button {
