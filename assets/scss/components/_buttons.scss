@@ -1,9 +1,9 @@
 /* Buttons classes | Start */
 :root {
-  --btn-padding-inline: 0.5rem;
+  --btn-padding-inline: 0.75rem;
   --btn-padding-block: 0.25rem;
   --btn-margin-block: 0.5rem;
-  --fs-button: 0.925rem;
+  --fs-button: 1rem;
   --fw-button: 500;
   --fs-button-icon: 0.975rem;
 }
@@ -14,8 +14,7 @@ button {
   max-height: 45px;
   max-width: 100%;
   padding: var(--btn-padding-block) var(--btn-padding-inline);
-  margin-block: var(--btn-margin-block);
-  border-radius: 5px;
+  @extend .rounded;
   background-clip: border-box;
   @extend .bg-white;
   @extend .text-secondary;
@@ -30,7 +29,7 @@ button {
   }
 }
 
-button > .bi {
+button > .icon {
   font-size: var(--fs-button-icon);
   display: flex;
   padding-inline-end: 5px;
@@ -149,7 +148,7 @@ button > span {
   border-color: $dark-clr !important;
 
   &:is(:focus, :hover) {
-    background-color: tint( $dark-clr, 10%) !important;
+    background-color: tint($dark-clr, 10%) !important;
     @extend .text-white;
     border-color: $dark-clr !important;
   }
@@ -236,11 +235,10 @@ button > span {
   }
 }
 
-
 .button-outline-light {
   @extend .text-dark;
   border-color: $light-clr !important;
-  
+
   &:is(:focus, :hover) {
     @extend .bg-light;
     @extend .text-dark;
@@ -251,7 +249,7 @@ button > span {
 .button-outline-dark {
   @extend .text-dark;
   border-color: $dark-clr !important;
-  
+
   &:is(:focus, :hover) {
     @extend .bg-dark;
     @extend .text-white;

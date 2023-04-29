@@ -364,7 +364,9 @@ section {
 .border-regualr-dark {
   border: 1px solid $border-dark-clr !important;
 }
-
+.rounded {
+  border-radius: 5px;
+}
 /* Decoration classes | End */
 
 /* Miscellaneous classes | Start */
@@ -456,6 +458,13 @@ section {
 .icon {
   @extend .fs-regular-icon;
   padding-inline-end: 10px;
+}
+
+.column-gap{
+  column-gap: var(--spacing-unit);
+}
+.row-gap{
+  row-gap: var(--spacing-unit);
 }
 
 /* Miscellaneous classes | End */

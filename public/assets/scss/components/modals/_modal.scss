@@ -11,76 +11,43 @@
 }
 
 .modal-container {
-  width: min(50%, 800px);
+  width: min(90%, 500px);
   height: max-content;
   padding: var(--spacing-unit);
   background-color: #fff;
   overflow: hidden;
 }
 
+.modal-large {
+  @extend .modal-container;
+  width: min(90%, 800px);
+}
+
 .modal-container > .modal-title {
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $border-light-clr;
-  
+
+  color: $primary-clr;
   h6 {
-    color: $secondary-clr;
+    color: $primary-clr;
+  }
+
+  .modal-closer {
+    color: $tertiary-clr;
+    font-size: var(--fs-lg-icon);
+    margin-inline-start: auto;
+    cursor: pointer;
   }
 }
 
-.modal-container > .buttons-bar {
-  width: 100%;
-  margin-top: var(--spacing-unit);
-  display: grid;
-  grid-template-columns: 25% 25%;
-  column-gap: var(--spacing-unit);
-}
-
-/* Buttons Styling  */
-.register-button {
-  background-color: $secondary-clr;
-  border: 1px solid $border-light-clr;
-  margin-inline-end: auto !important;
-
-  span {
-    color: white;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $secondary-clr;
-    border-color: $border-light-clr;
+.modal-container > .modal-body {
+  padding-block: var(--spacing-unit);
+  margin-block: var(--spacing-unit);
+  border-block: 1px solid $border-light-clr;
+  p {
   }
 }
 
-.reset-button {
-  background-color: white;
-  border: 1px solid color(GreyCream);
-  margin-inline-end: var(--spacing-unit) !important;
-
-  span {
-    color: $secondary-clr;
-  }
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 0 10px $secondary-clr;
-  }
+.modal-container > .modal-footer {
+  // padding-top: var(--spacing-unit);
 }
-
-.cancel-button {
-  background-color: color(GreyCream);
-  border: 1px solid color(Ashes);
-
-  span {
-    color: color(Gray);
-  }
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 0 10px $secondary-clr;
-  }
-}
-
-/* Buttons Styling */

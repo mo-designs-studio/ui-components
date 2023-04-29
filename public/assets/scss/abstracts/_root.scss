@@ -55,7 +55,7 @@
 
 @include onScreenMinWidth(screens(Tablet)) {
     :root {
-        --spacing-unit: 1rem;
+        --spacing-unit: .75rem;
         --spacing-unit-2x: 1.5rem;
         --spacing-unit-4x: 3rem;
     }
