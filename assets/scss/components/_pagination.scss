@@ -42,7 +42,9 @@
   width: 100%;
   text-align: center;
   border-inline-end: 1px solid $border-light-clr;
-
+  &:hover {
+    background-color: $light-clr;
+  }
   &:last-child {
     border-inline-end: none;
   }
@@ -59,7 +61,6 @@
 }
 
 .pagination-single {
-    
   p {
     color: $proceed-clr;
     font-weight: var(--fw-medium);

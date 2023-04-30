@@ -81,6 +81,10 @@ td {
 .table-striped > tbody > tr:nth-child(even) {
   @extend .bg-white;
 }
+.table-striped > tbody > tr:hover {
+  background-color: $proceed-clr !important;
+  color: $white-clr;
+}
 
 .table-bordered {
   tbody > tr {

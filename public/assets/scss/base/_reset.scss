@@ -61,7 +61,6 @@ h6 {
 h1 {
   color: $primary-clr;
   font-size: var(--fs-heading);
-
 }
 
 h2 {
@@ -69,13 +68,33 @@ h2 {
   font-size: var(--fs-subheading);
 }
 
-h3,h4,h5,h6 {
+h3,
+h4,
+h5,
+h6 {
   color: $secondary-clr;
 }
 
 p,
 small {
   overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+label,
+th,
+td,
+input {
+  &::selection {
+    background-color: $proceed-clr;
+    color: $white-clr;
+  }
 }
 
 ul[role="list"],

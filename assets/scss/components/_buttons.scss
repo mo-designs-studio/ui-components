@@ -1,5 +1,6 @@
 /* Buttons classes | Start */
 :root {
+  --btn-height: 35px;
   --btn-padding-inline: 0.75rem;
   --btn-padding-block: 0.25rem;
   --btn-margin-block: 0.5rem;
@@ -9,7 +10,7 @@
 }
 
 button {
-  height: fit-content;
+  height: var(--btn-height);
   width: fit-content;
   max-height: 45px;
   max-width: 100%;
@@ -26,6 +27,7 @@ button {
     border-color: $primary-clr !important;
     @extend .bg-primary;
     @extend .text-light;
+    outline: none;
   }
 }
 
