@@ -27,6 +27,7 @@ button {
     border-color: $primary-clr !important;
     @extend .bg-primary;
     @extend .text-light;
+    outline: none;
   }
 }
 
