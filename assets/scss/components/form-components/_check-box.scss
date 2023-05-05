@@ -99,22 +99,22 @@
     background-color: $alarm-clr;
   }
 }
-.checkbox-proceed {
+.checkbox-confirm {
   .checkbox:is(:hover, :focus) {
-    outline-color: lighten($color: $proceed-clr, $amount: 20%) !important;
-    box-shadow: 0 0 5px lighten($color: $proceed-clr, $amount: 20%) !important;
+    outline-color: lighten($color: $confirm-clr, $amount: 20%) !important;
+    box-shadow: 0 0 5px lighten($color: $confirm-clr, $amount: 20%) !important;
   }
   .pseduo-checkbox:checked ~ .fake-checkbox {
-    background-color: $proceed-clr;
+    background-color: $confirm-clr;
   }
 }
-.checkbox-agree {
+.checkbox-success {
   .checkbox:is(:hover, :focus) {
-    outline-color: lighten($color: $agree-clr, $amount: 20%) !important;
-    box-shadow: 0 0 5px lighten($color: $agree-clr, $amount: 20%) !important;
+    outline-color: lighten($color: $success-clr, $amount: 20%) !important;
+    box-shadow: 0 0 5px lighten($color: $success-clr, $amount: 20%) !important;
   }
   .pseduo-checkbox:checked ~ .fake-checkbox {
-    background-color: $agree-clr;
+    background-color: $success-clr;
   }
 }
 .checkbox-caution {

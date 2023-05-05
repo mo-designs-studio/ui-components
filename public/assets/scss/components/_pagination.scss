@@ -27,7 +27,7 @@
     @extend .flex-center;
   }
   .active {
-    background-color: $proceed-clr;
+    background-color: $confirm-clr;
     pointer-events: none;
     span {
       color: white;
@@ -62,7 +62,7 @@
 
 .pagination-single {
   p {
-    color: $proceed-clr;
+    color: $confirm-clr;
     font-weight: var(--fw-medium);
     text-transform: capitalize;
     span {

@@ -42,6 +42,8 @@ button > span {
   font-size: var(--fs-button);
   font-weight: var(--fw-button);
   text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .button-strict {
@@ -72,27 +74,27 @@ button > span {
   }
 }
 
-.button-filled-proceed {
-  @extend .bg-proceed;
+.button-filled-confirm {
+  @extend .bg-confirm;
   @extend .text-white;
-  border-color: $proceed-clr !important;
+  border-color: $confirm-clr !important;
 
   &:is(:focus, :hover) {
-    background-color: darken($proceed-clr, 10%) !important;
+    background-color: darken($confirm-clr, 10%) !important;
     @extend .text-white;
-    border-color: $proceed-clr !important;
+    border-color: $confirm-clr !important;
   }
 }
 
-.button-filled-agree {
-  @extend .bg-agree;
+.button-filled-success {
+  @extend .bg-success;
   @extend .text-white;
-  border-color: $agree-clr !important;
+  border-color: $success-clr !important;
 
   &:is(:focus, :hover) {
-    background-color: tint($agree-clr, 10%) !important;
+    background-color: tint($success-clr, 10%) !important;
     @extend .text-white;
-    border-color: $agree-clr !important;
+    border-color: $success-clr !important;
   }
 }
 
@@ -187,22 +189,22 @@ button > span {
   }
 }
 
-.button-outline-proceed {
-  border-color: $proceed-clr !important;
-  @extend .text-proceed;
+.button-outline-confirm {
+  border-color: $confirm-clr !important;
+  @extend .text-confirm;
   &:is(:focus, :hover) {
-    @extend .bg-proceed;
-    border-color: $proceed-clr !important;
+    @extend .bg-confirm;
+    border-color: $confirm-clr !important;
     @extend .text-white;
   }
 }
 
-.button-outline-agree {
-  border-color: $agree-clr !important;
-  @extend .text-agree;
+.button-outline-success {
+  border-color: $success-clr !important;
+  @extend .text-success;
   &:is(:focus, :hover) {
-    @extend .bg-agree;
-    border-color: $agree-clr !important;
+    @extend .bg-success;
+    border-color: $success-clr !important;
     @extend .text-white;
   }
 }

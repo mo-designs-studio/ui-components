@@ -82,7 +82,7 @@ td {
   @extend .bg-white;
 }
 .table-striped > tbody > tr:hover {
-  background-color: $proceed-clr !important;
+  background-color: $confirm-clr !important;
   color: $white-clr;
 }
 

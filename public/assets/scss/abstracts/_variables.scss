@@ -14,10 +14,10 @@ $colors: (
   "UltraViolet": #534c88,
   å "ROYALBlue": #4a8bdf,
   "Bloody": #bf0b3b,
+  "Mercury": #b90a43,
   "Imperial": #bf463b,
   "Barby": #ff6584,
   "Victoria": #f43573,
-  "Mercury": #b90a43,
   "RedWine": #780047,
   "Mustard": #fcc359,
   "Apricot": #f2bf5e,
@@ -56,8 +56,8 @@ $colors: (
 $primary-clr: color("DeepGlory");
 $secondary-clr: color("Gray");
 $tertiary-clr: color("RedWine");
-$proceed-clr: color("Glory");
-$agree-clr: color("Pine");
+$confirm-clr: color("Glory");
+$success-clr: color("Mint");
 $alarm-clr: color("Bloody");
 $caution-clr: color("Energy");
 $info-clr: color("UltraViolet");

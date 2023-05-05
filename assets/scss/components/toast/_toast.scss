@@ -1,20 +1,16 @@
-$successColor: color(Mint);
-$successBackground: lighten(color(Mint), 40%);
-$successTextColor: lighten(color(Mint), 10%);
-$infoColor: color(UltraViolet);
-$infoBackground: lighten(color(UltraViolet), 45%);
-$infoTextColor: lighten(color(UltraViolet), 10%);
-$warningColor: color(Energy);
-$warningBackground: lighten(color(Energy), 40%);
-$warningTextColor: lighten(color(Energy), 10%);
-$alertColor: color(Imperial);
-$alertBackground: lighten(color(Imperial), 40%);
-$alertTextColor: lighten(color(Imperial), 10%);
+:root {
+  --toast-padding: 10px;
+  --toast-closer-length: 20px;
+  --toast-title-font-size: 18px;
+  --toast-message-font-size: 14px;
+  --toast-icon-width: 35px;
+  --toast-icon-size: 25px;
+}
 
 .toasting {
   width: 100%;
   height: 100%;
-  padding: var(--spacing-unit-2x);
+  padding: var(--spacing-unit);
   position: fixed;
   @extend .position-zero;
   z-index: 100;
@@ -22,14 +18,13 @@ $alertTextColor: lighten(color(Imperial), 10%);
 }
 
 .toast {
-  width: 400px;
-  height: 100px;
-  padding: 10px;
+  width: max(80%, 300px);
+  height: 80px;
+  padding: var(--toast-padding);
   position: relative;
   border: 1px solid;
   border-radius: 5px;
-  box-shadow: 0 0 5px color(GreyCream);
-  cursor: pointer;
+  box-shadow: 0 0 5px $light-clr;
 }
 
 .toast-container {
@@ -38,14 +33,13 @@ $alertTextColor: lighten(color(Imperial), 10%);
   border-inline-start: 2px solid;
   padding-inline-start: var(--spacing-unit);
   display: grid;
-  grid-template-columns: calc(100% - 50px) 50px;
+  grid-template-columns: calc(100% - 35px) 35px;
 
   .toast-text-container {
     overflow: hidden;
-
     .toast-title {
       h6 {
-        font-size: 20px;
+        font-size: var(--toast-title-font-size);
         text-transform: capitalize;
       }
     }
@@ -53,9 +47,8 @@ $alertTextColor: lighten(color(Imperial), 10%);
     .toast-message {
       p {
         color: color(Gray);
-        font-size: 16px;
+        font-size: var(--toast-message-font-size);
         font-weight: 400;
-
         &::first-letter {
           text-transform: capitalize !important;
         }
@@ -64,130 +57,155 @@ $alertTextColor: lighten(color(Imperial), 10%);
   }
 
   .toast-icon {
-    width: 50px;
+    width: var(--toast-icon-width);
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    .bi {
-      font-size: 40px;
+    @extend .pos-mid-end;
+    .icon {
+      font-size: var(--toast-icon-size);
     }
+  }
+}
+
+.toast-closer {
+  height: var(--toast-closer-length);
+  width: var(--toast-closer-length);
+  padding: 2.5px;
+  @extend .flex-center;
+  border: 0.5px solid $border-light-clr;
+  background-color: $light-clr;
+  border-radius: 50%;
+  position: absolute;
+  top: calc((var(--toast-closer-length) / 2) * -1);
+  margin-inline-start: calc(100% - var(--toast-padding) - (var(--toast-closer-length) / 2));
+  cursor: pointer;
+  .icon {
+    color: $dark-clr;
+    font-size: var(--fs-regular-icon);
   }
 }
 
 .toast-success {
-  background-color: $successBackground;
-  border-color: $successColor;
-
+  background-color: tint($success-clr, 80%);
+  border-color: $success-clr;
   .toast-container {
-    border-inline-start: 3px solid $successColor;
-
+    border-inline-start: 3px solid $success-clr;
     .toast-text-container {
       .toast-title {
         h6 {
-          color: $successColor;
-        }
-      }
-
-      .toast-message {
-        p {
-          // color: $successTextColor;
+          color: $success-clr;
         }
       }
     }
-
     .toast-icon {
-      .bi {
-        color: $successColor;
+      .icon {
+        color: $success-clr;
       }
     }
   }
 }
 
-.toast-alert {
-  background-color: $alertBackground;
-  border-color: $alertColor;
-
+.toast-alarm {
+  background-color: tint($alarm-clr, 80%);
+  border-color: $alarm-clr;
   .toast-container {
-    border-inline-start: 3px solid $alertColor;
-
+    border-inline-start: 3px solid $alarm-clr;
     .toast-text-container {
       .toast-title {
         h6 {
-          color: $alertColor;
-        }
-      }
-
-      .toast-message {
-        p {
-          // color: $alertTextColor;
+          color: $alarm-clr;
         }
       }
     }
-
     .toast-icon {
-      .bi {
-        color: $alertColor;
+      .icon {
+        color: $alarm-clr;
       }
     }
   }
 }
 
 .toast-info {
-  background-color: $infoBackground;
-  border-color: $infoColor;
-
+  background-color: tint($info-clr, 80%);
+  border-color: $info-clr;
   .toast-container {
-    border-inline-start: 3px solid $infoColor;
-
+    border-inline-start: 3px solid $info-clr;
     .toast-text-container {
       .toast-title {
         h6 {
-          color: $infoColor;
-        }
-      }
-
-      .toast-message {
-        p {
-          // color: $infoTextColor;
+          color: $info-clr;
         }
       }
     }
-
     .toast-icon {
-      .bi {
-        color: $infoColor;
+      .icon {
+        color: $info-clr;
       }
     }
   }
 }
 
-.toast-warning {
-  background-color: $warningBackground;
-  border-color: $warningColor;
-
+.toast-caution {
+  background-color: tint($caution-clr, 80%);
+  border-color: $caution-clr;
   .toast-container {
-    border-inline-start: 3px solid $warningColor;
-
+    border-inline-start: 3px solid $caution-clr;
     .toast-text-container {
       .toast-title {
         h6 {
-          color: $warningColor;
-        }
-      }
-
-      .toast-message {
-        p {
-          // color: $warningTextColor;
+          color: $caution-clr;
         }
       }
     }
-
     .toast-icon {
-      .bi {
-        color: $warningColor;
+      .icon {
+        color: $caution-clr;
       }
     }
+  }
+}
+
+.toast-confirm {
+  background-color: tint($confirm-clr, 80%);
+  border-color: $confirm-clr;
+  .toast-container {
+    border-inline-start: 3px solid $confirm-clr;
+    .toast-text-container {
+      .toast-title {
+        h6 {
+          color: $confirm-clr;
+        }
+      }
+    }
+    .toast-icon {
+      .icon {
+        color: $confirm-clr;
+      }
+    }
+  }
+}
+
+.toast-message {
+  p {
+    color: $secondary-clr;
+  }
+}
+
+@include onScreenMinWidth(screens(Mobile)) {
+  :root {
+    --toast-title-font-size: 21px;
+    --toast-message-font-size: 16px;
+    --toast-icon-width: 50px;
+    --toast-icon-size: 40px;
+  }
+  .toasting {
+    padding: var(--spacing-unit-2x);
+  }
+  .toast {
+    width: 400px;
+    height: 100px;
+  }
+  .toast-container {
+    grid-template-columns: calc(100% - 50px) 50px;
   }
 }

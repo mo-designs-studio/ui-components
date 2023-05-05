@@ -92,7 +92,7 @@ th,
 td,
 input {
   &::selection {
-    background-color: $proceed-clr;
+    background-color: $confirm-clr;
     color: $white-clr;
   }
 }
