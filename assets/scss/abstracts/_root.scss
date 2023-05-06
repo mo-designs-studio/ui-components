@@ -11,7 +11,7 @@
     --standard-font-size: 16px;
     --spacing-unit: 0.5rem;
     --spacing-unit-2x: 1rem;
-    --spacing-unit-2x: 2rem;
+    --spacing-unit-4x: 2rem;
     --tool-tip-width: 150px;
     --standard-font-size: 12px;
     --fs-hero-title: 5rem;
@@ -39,15 +39,9 @@
     --fw-thin: 300;
 }
 
-@include onScreenMinWidth(screens(Mini-Mobile)) {}
+
 
 @include onScreenMinWidth(screens(Mobile)) {
-    :root {
-        --standard-font-size: 15px;
-    }
-}
-
-@include onScreenMinWidth(screens(Mini-Tablet)) {
     :root {
         --standard-font-size: 16px;
     }
@@ -60,5 +54,3 @@
         --spacing-unit-4x: 3rem;
     }
 }
-
-@include onScreenMinWidth(screens(Desktop)) {}

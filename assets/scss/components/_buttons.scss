@@ -23,7 +23,7 @@ button {
   cursor: pointer;
   @extend .flex-row;
   @extend .flex-center;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     border-color: $primary-clr !important;
     @extend .bg-primary;
     @extend .text-light;
@@ -55,7 +55,7 @@ button > span {
   @extend .text-white;
   border-color: $primary-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: lighten($primary-clr, 10%) !important;
     @extend .text-white;
     border-color: $primary-clr !important;
@@ -67,7 +67,7 @@ button > span {
   @extend .text-white;
   border-color: $secondary-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: darken($secondary-clr, 10%) !important;
     @extend .text-white;
     border-color: $secondary-clr !important;
@@ -79,7 +79,7 @@ button > span {
   @extend .text-white;
   border-color: $confirm-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: darken($confirm-clr, 10%) !important;
     @extend .text-white;
     border-color: $confirm-clr !important;
@@ -91,7 +91,7 @@ button > span {
   @extend .text-white;
   border-color: $success-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: tint($success-clr, 10%) !important;
     @extend .text-white;
     border-color: $success-clr !important;
@@ -103,7 +103,7 @@ button > span {
   @extend .text-white;
   border-color: $alarm-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: darken($alarm-clr, 10%) !important;
     @extend .text-white;
     border-color: $alarm-clr !important;
@@ -115,7 +115,7 @@ button > span {
   @extend .text-white;
   border-color: $caution-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: lighten($caution-clr, 10%) !important;
     @extend .text-white;
     border-color: $caution-clr !important;
@@ -127,7 +127,7 @@ button > span {
   @extend .text-white;
   border-color: $info-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: darken($info-clr, 10%) !important;
     @extend .text-white;
     border-color: $info-clr !important;
@@ -139,7 +139,7 @@ button > span {
   @extend .text-secondary;
   border-color: $light-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: color(Smoky) !important;
     @extend .text-dark;
     border-color: $light-clr !important;
@@ -151,7 +151,7 @@ button > span {
   @extend .text-white;
   border-color: $dark-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     background-color: tint($dark-clr, 10%) !important;
     @extend .text-white;
     border-color: $dark-clr !important;
@@ -163,7 +163,7 @@ button > span {
   @extend .text-primary;
   border-width: 1px;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     color: white !important;
   }
 }
@@ -172,7 +172,7 @@ button > span {
   border-color: $primary-clr !important;
   @extend .text-primary;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-primary;
     border-color: $primary-clr !important;
     @extend .text-white;
@@ -182,7 +182,7 @@ button > span {
 .button-outline-secondary {
   border-color: $secondary-clr !important;
   @extend .text-secondary;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-secondary;
     border-color: $secondary-clr !important;
     @extend .text-white;
@@ -192,7 +192,7 @@ button > span {
 .button-outline-confirm {
   border-color: $confirm-clr !important;
   @extend .text-confirm;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-confirm;
     border-color: $confirm-clr !important;
     @extend .text-white;
@@ -202,7 +202,7 @@ button > span {
 .button-outline-success {
   border-color: $success-clr !important;
   @extend .text-success;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-success;
     border-color: $success-clr !important;
     @extend .text-white;
@@ -212,7 +212,7 @@ button > span {
 .button-outline-alarm {
   border-color: $alarm-clr !important;
   @extend .text-alarm;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-alarm;
     border-color: $alarm-clr !important;
     @extend .text-white;
@@ -222,7 +222,7 @@ button > span {
 .button-outline-caution {
   border-color: $caution-clr !important;
   @extend .text-caution;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-caution;
     border-color: $caution-clr !important;
     @extend .text-white;
@@ -232,7 +232,7 @@ button > span {
 .button-outline-info {
   border-color: $info-clr !important;
   @extend .text-info;
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-info;
     border-color: $info-clr !important;
     @extend .text-white;
@@ -243,7 +243,7 @@ button > span {
   @extend .text-secondary;
   border-color: $light-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-light;
     @extend .text-dark;
     border-color: $light-clr !important;
@@ -254,7 +254,7 @@ button > span {
   @extend .text-dark;
   border-color: $dark-clr !important;
 
-  &:is(:focus, :hover) {
+  &:is(:focus-visible, :hover) {
     @extend .bg-dark;
     @extend .text-white;
     border-color: $dark-clr !important;
