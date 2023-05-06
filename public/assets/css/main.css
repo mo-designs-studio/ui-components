@@ -10013,20 +10013,24 @@ input::placeholder {
 :root {
   --toast-padding: 10px;
   --toast-closer-length: 20px;
+  --toast-title-font-size: 18px;
+  --toast-message-font-size: 14px;
+  --toast-icon-width: 35px;
+  --toast-icon-size: 25px;
 }
 
 .toasting {
   width: 100%;
   height: 100%;
-  padding: var(--spacing-unit-2x);
+  padding: var(--spacing-unit);
   position: fixed;
   z-index: 100;
   display: flex;
 }
 
 .toast {
-  width: max(80%, 320px);
-  height: 100px;
+  width: max(80%, 300px);
+  height: 85px;
   padding: var(--toast-padding);
   position: relative;
   border: 1px solid;
@@ -10040,29 +10044,29 @@ input::placeholder {
   border-inline-start: 2px solid;
   padding-inline-start: var(--spacing-unit);
   display: grid;
-  grid-template-columns: calc(100% - 50px) 50px;
+  grid-template-columns: calc(100% - 35px) 35px;
 }
 .toast-container .toast-text-container {
   overflow: hidden;
 }
 .toast-container .toast-text-container .toast-title h6 {
-  font-size: 20px;
+  font-size: var(--toast-title-font-size);
   text-transform: capitalize;
 }
 .toast-container .toast-text-container .toast-message p {
-  font-size: 16px;
+  font-size: var(--toast-message-font-size);
   font-weight: 400;
 }
 .toast-container .toast-text-container .toast-message p::first-letter {
   text-transform: capitalize !important;
 }
 .toast-container .toast-icon {
-  width: 50px;
+  width: var(--toast-icon-width);
   height: 100%;
   display: flex;
 }
 .toast-container .toast-icon .icon {
-  font-size: 40px;
+  font-size: var(--toast-icon-size);
 }
 
 .toast-closer {
@@ -10157,9 +10161,21 @@ input::placeholder {
 }
 
 @media (min-width: 480px) {
+  :root {
+    --toast-title-font-size: 21px;
+    --toast-message-font-size: 16px;
+    --toast-icon-width: 50px;
+    --toast-icon-size: 40px;
+  }
+  .toasting {
+    padding: var(--spacing-unit-2x);
+  }
   .toast {
     width: 400px;
     height: 100px;
+  }
+  .toast-container {
+    grid-template-columns: calc(100% - 50px) 50px;
   }
 }
 

@@ -22,6 +22,7 @@ html:focus-within {
 }
 
 body {
+  min-width: screens(Mini-Mobile);
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
