@@ -192,7 +192,7 @@
         <div class="container">
           <div class="form-row">
             <div class="form-field">
-              <button class="button-filled-proceed modal-display" data-modal-target="modal-basic" type="button">
+              <button class="button-filled-confirm modal-display" data-modal-target="modal-basic" type="button">
                 <span>show basic modal</span>
               </button>
             </div>
@@ -217,8 +217,7 @@
                 data-toast-title="info title"
                 data-toast-text="random message to display on toast."
                 data-toast-icon="bi bi-info-circle"
-                data-toast-life-time=false
-                >
+                data-toast-life-time="false">
                 <span>toast using data attribute</span>
               </button>
             </div>
@@ -229,8 +228,7 @@
                 data-toast-position="pos-top-start"
                 data-toast-title="caution title"
                 data-toast-text="random message to display on toast."
-                data-toast-life-time=3000
-                >
+                data-toast-life-time="3000">
                 <span>toast caution</span>
               </button>
             </div>
@@ -241,8 +239,7 @@
                 data-toast-position="pos-mid-center"
                 data-toast-title="alarm title"
                 data-toast-text="random message to display on toast."
-                data-toast-life-time=3000
-                >
+                data-toast-life-time="3000">
                 <span>toast alarm</span>
               </button>
             </div>
@@ -253,9 +250,20 @@
                 data-toast-position="pos-mid-center"
                 data-toast-title="confirm title"
                 data-toast-text="random message to display on toast."
-                data-toast-life-time=3000
-                >
+                data-toast-life-time="3000">
                 <span>toast confirm</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="form-row flex-wrap">
+            <div class="form-field">
+              <button class="button-filled-caution tooltip-container">
+                <span class="tooltip-top">view account</span>
+                <span>tooltip on top</span>
               </button>
             </div>
           </div>

@@ -9604,7 +9604,6 @@ td {
 .form-field {
   padding-inline: var(--spacing-unit);
   margin-block: var(--spacing-unit);
-  overflow-x: hidden;
 }
 
 label {
@@ -9959,6 +9958,10 @@ input::placeholder {
 }
 
 /* Tooltip classes | Start */
+:root {
+  --tool-tip-width: 200px;
+}
+
 .tooltip-container {
   position: relative;
   display: flex;
@@ -9973,7 +9976,7 @@ input::placeholder {
   padding: 5px;
   position: absolute;
   z-index: 1;
-  display: none;
+  display: block;
   border-radius: 5px;
   background-color: #5d5d5d;
   color: #fff;

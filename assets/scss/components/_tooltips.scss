@@ -1,4 +1,7 @@
 /* Tooltip classes | Start */
+:root {
+  --tool-tip-width: 200px;
+}
 .tooltip-container {
   position: relative;
   display: flex;
@@ -15,7 +18,7 @@
   padding: 5px;
   position: absolute;
   z-index: 1;
-  display: none;
+  display: block;
   border-radius: 5px;
   background-color: $secondary-clr;
   color: $white-clr;
