@@ -1,8 +1,8 @@
 /* Tooltip classes | Start */
 :root {
-  --tool-tip-width: 100%;
-  --tool-tip-pointer-length: 10px;
-  --tool-tip-pointer-spacer: 15px;
+  --tool-tip-min-width: 120px;
+  --tool-tip-pointer-length: 7.5px;
+  --tool-tip-pointer-spacer: 12.5px;
 }
 $tooltipBgClr: $dark-clr;
 .tooltip-container {
@@ -13,11 +13,11 @@ $tooltipBgClr: $dark-clr;
 }
 
 .tooltip {
-  max-width: 100%;
+  width: max(100%, var(--tool-tip-min-width));
   padding: 5px;
   position: absolute;
   z-index: 1;
-  display: block;
+  display: none;
   border-radius: 5px;
   background-color: $tooltipBgClr;
   color: $white-clr;
@@ -30,8 +30,6 @@ $tooltipBgClr: $dark-clr;
   &::after {
     content: "";
     position: absolute;
-    left: 50%;
-    
     border-width: var(--tool-tip-pointer-length);
     border-style: solid;
   }
@@ -42,6 +40,7 @@ $tooltipBgClr: $dark-clr;
   bottom: calc(100% + var(--tool-tip-pointer-spacer));
   &::after {
     top: 100%;
+    left: 50%;
     margin-left: calc(var(--tool-tip-pointer-length) * -1);
     border-color: $tooltipBgClr transparent transparent transparent;
   }
@@ -52,20 +51,58 @@ $tooltipBgClr: $dark-clr;
   top: calc(100% + var(--tool-tip-pointer-spacer));
   &::after {
     bottom: 100%;
+    left: 50%;
     margin-left: calc(var(--tool-tip-pointer-length) * -1);
     border-color: transparent transparent $tooltipBgClr transparent;
   }
 }
-.tooltip-after {
+.tooltip-start {
   @extend .tooltip;
   width: 100%;
-  margin-inline-end: calc(200% + 20px);
+  right: 0;
+  margin-inline-end: calc(100% + var(--tool-tip-pointer-spacer));
   &::after {
-    top: 50%;
-    margin-top: -10px;
+    right: 0;
+    margin-top: calc(var(--tool-tip-pointer-length) * -1);
+    margin-inline-end: calc(var(--tool-tip-pointer-length) * -2);
     border-color: transparent transparent transparent $tooltipBgClr;
-    margin-inline-start: 50%;
+  }
+}
+.tooltip-end {
+  @extend .tooltip;
+  width: 100%;
+  left: 0;
+  margin-inline-start: calc(100% + var(--tool-tip-pointer-spacer));
+  &::after {
+    left: 0;
+    margin-top: calc(var(--tool-tip-pointer-length) * -1);
+    margin-inline-start: calc(var(--tool-tip-pointer-length) * -2);
+    border-color: transparent $tooltipBgClr transparent transparent;
   }
 }
 
 /* Tooltip classes | End */
+
+.rtl {
+  .tooltip-start {
+    right: unset;
+    left: 0;
+    margin-inline-end: calc(100% + var(--tool-tip-pointer-spacer));
+    &::after {
+      right: unset;
+      left: 0;
+      border-color: transparent $tooltipBgClr transparent transparent;
+    }
+  }
+  .tooltip-end {
+    left: unset;
+    right: 0;
+    &::after {
+      left: unset;
+      right: 0;
+      margin-top: calc(var(--tool-tip-pointer-length) * -1);
+      margin-inline-start: calc(var(--tool-tip-pointer-length) * -2);
+      border-color: transparent transparent transparent $tooltipBgClr;
+    }
+  }
+}
