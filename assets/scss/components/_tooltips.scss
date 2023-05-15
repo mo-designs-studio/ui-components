@@ -5,6 +5,7 @@
   --tool-tip-pointer-spacer: 12.5px;
 }
 $tooltipBgClr: $dark-clr;
+
 .tooltip-container {
   position: relative;
   &:is(:hover, :focus) > .tooltip {
@@ -27,6 +28,7 @@ $tooltipBgClr: $dark-clr;
   font-weight: var(--fw-medium);
   overflow: visible;
   white-space: normal;
+  animation: animate-tooltip 0.25s linear;
   &::after {
     content: "";
     position: absolute;
@@ -105,6 +107,18 @@ $tooltipBgClr: $dark-clr;
       border-color: transparent transparent transparent $tooltipBgClr;
     }
   }
+}
+
+@keyframes animate-tooltip {
+  0% {
+//for rotating effect rotate is set 25deg at beggining
+transform: translateY(10px) rotate(25deg);
+opacity: 0;
+}
+100% {
+transform: translateY(0) rotate(0deg);
+opacity: 1;
+}
 }
 
 @include onScreenMaxWidth(screens(Mini-Mobile)) {

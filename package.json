@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "dev": "sergey",
-    "sass": "sass --watch assets/scss:assets/css"
+    "sass": "sass --watch --style=compressed assets/scss:assets/css"
   },
   "repository": {
     "type": "git",

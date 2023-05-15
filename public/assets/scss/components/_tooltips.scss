@@ -5,6 +5,7 @@
   --tool-tip-pointer-spacer: 12.5px;
 }
 $tooltipBgClr: $dark-clr;
+
 .tooltip-container {
   position: relative;
   &:is(:hover, :focus) > .tooltip {
@@ -27,6 +28,7 @@ $tooltipBgClr: $dark-clr;
   font-weight: var(--fw-medium);
   overflow: visible;
   white-space: normal;
+  animation: animate-tooltip 0.25s linear;
   &::after {
     content: "";
     position: absolute;
@@ -103,6 +105,37 @@ $tooltipBgClr: $dark-clr;
       margin-top: calc(var(--tool-tip-pointer-length) * -1);
       margin-inline-start: calc(var(--tool-tip-pointer-length) * -2);
       border-color: transparent transparent transparent $tooltipBgClr;
+    }
+  }
+}
+
+@keyframes animate-tooltip {
+  0% {
+//for rotating effect rotate is set 25deg at beggining
+transform: translateY(10px) rotate(25deg);
+opacity: 0;
+}
+100% {
+transform: translateY(0) rotate(0deg);
+opacity: 1;
+}
+}
+
+@include onScreenMaxWidth(screens(Mini-Mobile)) {
+  .tooltip-start,
+  .tooltip-end {
+    right: unset;
+    left: unset;
+    margin-inline-end: unset;
+    margin-inline-start: unset;
+    bottom: calc(100% + var(--tool-tip-pointer-spacer));
+    &::after {
+      right: unset;
+      margin: unset;
+      top: 100%;
+      left: 50%;
+      margin-left: calc(var(--tool-tip-pointer-length) * -1);
+      border-color: $tooltipBgClr transparent transparent transparent;
     }
   }
 }

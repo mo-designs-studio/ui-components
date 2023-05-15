@@ -8,7 +8,7 @@
     --vw-mini-tablet: 768px;
     --vw-tablet: 1024px;
     --vw-desktop: var(--max-width);
-    --standard-font-size: 16px;
+    --standard-font-size: 14px;
     --spacing-unit: 0.5rem;
     --spacing-unit-2x: 1rem;
     --spacing-unit-4x: 2rem;
@@ -39,8 +39,6 @@
     --fw-thin: 300;
     --border-radius: 5px;
 }
-
-
 
 @include onScreenMinWidth(screens(Mobile)) {
     :root {
