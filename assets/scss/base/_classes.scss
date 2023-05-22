@@ -12,6 +12,10 @@ main {
   overflow-x: hidden;
 }
 
+.min-full-height {
+  min-height: 100vh;
+}
+
 /* Layout classes | End */
 
 /* Containers classes | Start */
@@ -366,6 +370,18 @@ section {
 }
 .rounded {
   border-radius: var(--border-radius);
+}
+.card-shadow-light {
+  box-shadow: 2px 4px 10px $shadow-light-clr;
+}
+.card-shadow-dark {
+  box-shadow: 2px 4px 10px $shadow-dark-clr;
+}
+.card-shadow-light-outline {
+  box-shadow: 0 0 10px $shadow-light-clr;
+}
+.card-shadow-dark-outline {
+  box-shadow: 0 0 10px $shadow-dark-clr;
 }
 /* Decoration classes | End */
 
