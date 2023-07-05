@@ -2,18 +2,11 @@
 
 @import "vendors/bootstrap-icons";
 
-@import "base/reset";
-@import "base/typography";
-@import "base/classes";
+@import "base/index";
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/sidebar";
+@import "layout/index";
 
-@import "components/components";
-
-@import "pages/form-elements";
+@import "components/index";
 
 body [data-theme="light"] {
   @import "themes/light";

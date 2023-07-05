@@ -1,5 +1,3 @@
-$elementHeight: 40px;
-
 .form-field {
   padding-inline: var(--spacing-unit);
   margin-block: var(--spacing-unit);
@@ -16,13 +14,4 @@ label {
   overflow-x: hidden;
 }
 
-.form-buttons-bar {
-  width: var(--max-view-width);
-  margin: auto;
-  display: grid;
-  row-gap: var(--spacing-unit);
-}
 
-@import "./form-components/inputs";
-@import "./form-components/check-box";
-@import "./form-components/custom-select";
