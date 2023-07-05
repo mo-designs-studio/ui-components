@@ -111,19 +111,20 @@ $tooltipBgClr: $dark-clr;
 
 @keyframes animate-tooltip {
   0% {
-//for rotating effect rotate is set 25deg at beggining
-transform: translateY(10px) rotate(25deg);
-opacity: 0;
-}
-100% {
-transform: translateY(0) rotate(0deg);
-opacity: 1;
-}
+    //for rotating effect rotate is set 25deg at beggining
+    transform: translateY(10px) rotate(25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 @include onScreenMaxWidth(screens(Mini-Mobile)) {
   .tooltip-start,
   .tooltip-end {
+    width: max(100%, var(--tool-tip-min-width));
     right: unset;
     left: unset;
     margin-inline-end: unset;

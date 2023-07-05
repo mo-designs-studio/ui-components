@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
 
-  <body data-direction="ltr">
+  <body data-direction="ltr" data-theme="light">
     <main>
       <section>
   <div class="container">
@@ -591,36 +591,32 @@
       </section>
     </main>
     <div class="modal" id="modal-basic" role="dialog">
-    <div class="modal-container">
-      <div class="modal-title">
-        <i class="bi bi-translate pre-icon"></i>
-        <h6>modal title</h6>
-        <div
-          class="modal-closer modal-dismiss"
-          data-modal-target="modal-basic">
-          <i class="bi bi-x icon"></i>
-        </div>
+  <div class="modal-container">
+    <div class="modal-title">
+      <i class="bi bi-translate pre-icon"></i>
+      <h6>modal title</h6>
+      <div class="modal-closer modal-dismiss" data-modal-target="modal-basic">
+        <i class="bi bi-x icon"></i>
       </div>
-      <div class="modal-body">
-        <p>Woo-hoo, you're reading this text in a modal!</p>
-      </div>
-      <div class="modal-footer">
-        <div class="container-fluent flex-row column-gap">
-          <button type="button" class="button-filled-proceed">
-            <i class="bi bi-journal-check icon"></i>
-            <span>confirm</span>
-          </button>
-          <button
-            type="reset"
-            class="button-filled-light modal-dismiss"
-            data-modal-target="modal-basic">
-            <i class="bi bi-eject icon"></i>
-            <span>cancel</span>
-          </button>
-        </div>
+    </div>
+    <div class="modal-body">
+      <p>Woo-hoo, you're reading this text in a modal!</p>
+    </div>
+    <div class="modal-footer">
+      <div class="container-fluent flex-row column-gap">
+        <button type="button" class="button-filled-proceed">
+          <i class="bi bi-journal-check icon"></i>
+          <span>confirm</span>
+        </button>
+        <button type="reset" class="button-filled-light modal-dismiss" data-modal-target="modal-basic">
+          <i class="bi bi-eject icon"></i>
+          <span>cancel</span>
+        </button>
       </div>
     </div>
   </div>
+</div>
+
     <script type="module" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/toast.js"></script>
   </body>

@@ -1,9 +1,6 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-@import "abstracts/root";
+@import "abstracts/";
 
-@import "vendors/bootstrap-icons.scss";
+@import "vendors/bootstrap-icons";
 
 @import "base/reset";
 @import "base/typography";
@@ -18,13 +15,17 @@
 
 @import "pages/form-elements";
 
-@import "themes/light";
-@import "themes/dark";
+body [data-theme="light"] {
+  @import "themes/light";
+}
+
+body [data-theme="dark"] {
+  @import "themes/dark";
+}
 
 body[data-direction="rtl"] {
   @import "./rtl";
 }
 body[data-direction="ltr"] {
   @import "./ltr";
-  
 }

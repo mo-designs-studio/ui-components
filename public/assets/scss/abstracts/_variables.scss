@@ -68,6 +68,8 @@ $dark-clr: color("Mestrious");
 $article-text-clr: tint($primary-clr, 30%);
 $border-light-clr: shade($light-clr, 10%);
 $border-dark-clr: color("Ashes");
+$shadow-light-clr : tint($secondary-clr, 20%);
+$shadow-dark-clr : $secondary-clr;
 $hint-clr: color("Ashes");
 
 $breakpoints: (
