@@ -18,6 +18,8 @@
   border: 1px solid color(GreyCream);
   border-radius: 5px;
   display: none;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   transition: all 1s linear;
 
   ul > li {
