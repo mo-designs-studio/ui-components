@@ -35,6 +35,11 @@ section {
   height: fit-content;
 }
 
+.conteiner-tight {
+  @extend .conteiner !optional;
+  width: fit-content;
+}
+
 .padding-inline {
   padding-inline: var(--spacing-unit);
 }
