@@ -12,7 +12,7 @@ $colors: (
   "DarkSky": #0e1b2e,
   "GloryLight": #9fc3e6,
   "UltraViolet": #534c88,
-  å "ROYALBlue": #4a8bdf,
+  "ROYALBlue": #4a8bdf,
   "Bloody": #bf0b3b,
   "Mercury": #b90a43,
   "Imperial": #bf463b,
@@ -68,8 +68,8 @@ $dark-clr: color("Mestrious");
 $article-text-clr: tint($primary-clr, 30%);
 $border-light-clr: shade($light-clr, 10%);
 $border-dark-clr: color("Ashes");
-$shadow-light-clr : tint($secondary-clr, 20%);
-$shadow-dark-clr : $secondary-clr;
+$shadow-light-clr: tint($secondary-clr, 20%);
+$shadow-dark-clr: $secondary-clr;
 $hint-clr: color("Ashes");
 
 $breakpoints: (
