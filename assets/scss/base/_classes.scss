@@ -491,6 +491,13 @@ section {
   @extend .position-zero;
   z-index: 2;
 }
+.max-cover {
+  @extend .cover;
+  position: fixed;
+  z-index: 99;
+  @extend .flex-center;
+  opacity: 0.99;
+}
 .expanded {
   flex-grow: 1;
 }
