@@ -426,14 +426,15 @@ section {
   @extend .paragraph-limited;
   -webkit-line-clamp: 3;
 }
-
 .cursorless {
   cursor: none !important;
+}
+.pointer {
+  cursor: pointer !important;
 }
 .flip-vertical {
   transform: rotateX(180deg);
 }
-
 .flip-horizontal {
   transform: rotateY(180deg);
 }
@@ -490,11 +491,12 @@ section {
   @extend .position-zero;
   z-index: 2;
 }
-
 .expanded {
   flex-grow: 1;
 }
-
+.no-max {
+  max-width: none !important;
+}
 .background-image-cover {
   /* to add as pseudo element */
   content: "";
