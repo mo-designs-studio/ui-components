@@ -213,8 +213,8 @@
                 class="button-filled-info toast-display"
                 data-toast-status="info"
                 data-toast-position="pos-top-center"
-                data-toast-title="info title"
-                data-toast-text="random message to display on toast."
+                data-toast-title="info title using data attribute"
+                data-toast-text="random message to display on toast and some additional text will be wrapped"
                 data-toast-icon="bi bi-info-circle"
                 data-toast-life-time="false">
                 <span>toast using data attribute</span>
@@ -250,6 +250,17 @@
                 data-toast-title="confirm title"
                 data-toast-text="random message to display on toast."
                 data-toast-life-time="3000">
+                <span>toast confirm</span>
+              </button>
+            </div>
+            <div class="form-field">
+              <button
+                class="button-filled-secondary toast-display"
+                data-toast-status="tip"
+                data-toast-position="pos-mid-center"
+                data-toast-title="tip title"
+                data-toast-text="random message to display on toast."
+                data-toast-life-time="5000">
                 <span>toast confirm</span>
               </button>
             </div>
@@ -304,6 +315,37 @@
                   </ul>
                 </div>
               </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container bg-dark">
+
+          <div class="container-fluid width-15 bg-light">
+            <div class="dropped-menu">
+              <div class="dropped-menu-container">
+                <div class="dropped-menu-container--trigger">
+                  <label for="dropped-menu-trigger">
+                    <span><i class="bi bi-grip-vertical"></i>login or register<i class="bi bi-grip-vertical"></i></span>
+                    <input id="dropped-menu-trigger" type="checkbox" />
+                    <div class="dropped-menu-list">
+                      <ul role="list">
+                        <li role="listitem">
+                          <a href="#"
+                            ><span><i class="bi bi-door-open icon"></i>login</span></a
+                          >
+                        </li>
+                        <li role="listitem">
+                          <a href="#"
+                            ><span><i class="bi bi-journal-check icon"></i>register</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </div>

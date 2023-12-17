@@ -1,0 +1,74 @@
+/* Dropped menu styling | Start */
+.dropped-menu {
+  width: 100%;
+  padding-inline: var(--spacing-unit);
+  position: relative;
+}
+.dropped-menu-container {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropped-menu-container--trigger {
+  height: 100%;
+  label {
+    height: inherit;
+    display: flex;
+    cursor: pointer;
+  }
+  span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary-clr;
+    font-size: var(--fs-nav);
+    font-weight: var(--fw-medium);
+    text-transform: capitalize;
+  }
+}
+#dropped-menu-trigger {
+  display: none;
+}
+#dropped-menu-trigger:checked + .dropped-menu-list {
+  display: block;
+}
+.dropped-menu-list {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: shade($secondary-clr, 10%);
+  border-top: 1px solid white;
+  cursor: default;
+  @extend .card-shadow-dark;
+  :last-child {
+    border: 0;
+  }
+  li {
+    width: 100%;
+    height: 40px;
+    padding-inline: var(--spacing-unit);
+    display: flex;
+    border-bottom: 0.5px solid $light-clr;
+  }
+  li a span {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: $white-clr;
+    font-size: var(--fs-nav);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  li span .icon {
+    @extend .pre-icon;
+    font-size: var(--fs-small-icon);
+  }
+}
+/* Dropped menu styling | End */

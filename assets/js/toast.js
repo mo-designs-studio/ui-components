@@ -61,7 +61,7 @@ const toast = ({ status, position, title, text, icon, lifeTime = 5000 }) => {
   toasting.classList.add(toastPosition);
   toasting.append(toast);
   const dismissTimeout = setTimeout(() => {
-    if (lifeTime > 0) body.removeChild(toasting);
+    if (lifeTime > 0 & toasting) body.removeChild(toasting);
   }, lifeTime);
   toastCloser.addEventListener("click", (_) => {
     clearTimeout(dismissTimeout);
