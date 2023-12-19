@@ -5,18 +5,20 @@
   position: relative;
 }
 .dropped-menu-container {
-    height: 100%;
-    margin: auto;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .dropped-menu-container--trigger {
   height: 100%;
+  width: 100%;
   label {
     height: inherit;
+    max-width: none !important;
     display: flex;
     cursor: pointer;
   }
@@ -40,11 +42,12 @@
 .dropped-menu-list {
   width: 100%;
   position: absolute;
+  z-index: 96;
   top: 100%;
   right: 0;
   display: none;
   background-color: shade($secondary-clr, 10%);
-  border-top: 1px solid white;
+  border-top: 1px solid $white-clr;
   cursor: default;
   @extend .card-shadow-dark;
   :last-child {
